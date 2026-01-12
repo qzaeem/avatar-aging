@@ -1,19 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5354146220687651728
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 0
---- !u!114 &-5084356454244950174
+--- !u!114 &-7156804855957704769
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33,35 +20,35 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: avaturn_body_material
-  m_Shader: {fileID: -6465566751694194690, guid: 3f838362640e0b747be7a5e7831e1060, type: 3}
+  m_Name: avaturn_hair_0_material
+  m_Shader: {fileID: -6465566751694194690, guid: b9d29dfa1474148e792ac720cbd45122, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_ValidKeywords:
+  - _SURFACE_TYPE_TRANSPARENT
+  m_InvalidKeywords:
+  - _DISABLE_SSR_TRANSPARENT
+  - _ENABLE_FOG_ON_TRANSPARENT
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap:
     MotionVector: User
-    RenderType: Opaque
+    RenderType: Transparent
   disabledShaderPasses:
   - MOTIONVECTORS
+  - TransparentDepthPrepass
+  - TransparentDepthPostpass
+  - TransparentBackface
+  - RayTracingPrepass
+  - DepthOnly
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _OldAge_color:
-        m_Texture: {fileID: 2800000, guid: 0874102920df9fb4dbb26444231de131, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OldAge_normal:
-        m_Texture: {fileID: 2800000, guid: 3d4eff5a9e967fa40a1eb7bf60ca7c33, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - baseColorTexture:
-        m_Texture: {fileID: 7381396581560845314, guid: 11499a959c3de774188db3fbbec1fecc, type: 3}
+        m_Texture: {fileID: 6173601922266108619, guid: 11499a959c3de774188db3fbbec1fecc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - emissiveTexture:
@@ -69,11 +56,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - metallicRoughnessTexture:
-        m_Texture: {fileID: -6404723504821399241, guid: 11499a959c3de774188db3fbbec1fecc, type: 3}
+        m_Texture: {fileID: -7827489540184563414, guid: 11499a959c3de774188db3fbbec1fecc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - normalTexture:
-        m_Texture: {fileID: 5311122998926506052, guid: 11499a959c3de774188db3fbbec1fecc, type: 3}
+        m_Texture: {fileID: 3646537275155388751, guid: 11499a959c3de774188db3fbbec1fecc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - occlusionTexture:
@@ -98,7 +85,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Age: 1
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _BUILTIN_AlphaClip: 0
@@ -115,29 +101,28 @@ Material:
     - _Blend: 0
     - _BlendModePreserveSpecular: 0
     - _CastShadows: 1
-    - _Cull: 0
-    - _DstBlend: 0
-    - _OldAge_normal_Strength: 1
+    - _Cull: 2
+    - _DstBlend: 10
     - _QueueControl: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _SrcBlend: 1
-    - _Surface: 0
+    - _SrcBlend: 5
+    - _Surface: 1
     - _WorkflowMode: 1
     - _ZTest: 4
-    - _ZWrite: 1
+    - _ZWrite: 0
     - _ZWriteControl: 0
     - alphaCutoff: 0
     - baseColorTexture_texCoord: 0
     - emissiveExposureWeight: 0
     - emissiveTexture_texCoord: 0
-    - metallicFactor: 1
+    - metallicFactor: 0.15
     - metallicRoughnessTexture_texCoord: 0
     - normalTexture_scale: 1
     - normalTexture_texCoord: 0
     - occlusionTexture_strength: 1
     - occlusionTexture_texCoord: 0
-    - roughnessFactor: 1
+    - roughnessFactor: 0.85
     - transmissionFactor: 0
     m_Colors:
     - baseColorFactor: {r: 1, g: 1, b: 1, a: 1}
@@ -149,3 +134,16 @@ Material:
     - occlusionTexture_Rotation: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
+--- !u!114 &5206773029144694705
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0

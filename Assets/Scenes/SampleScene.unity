@@ -437,6 +437,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zaeem
       objectReference: {fileID: 0}
+    - target: {fileID: 6635245195314443262, guid: 926cb1bd1ad4c4543b0b8301a872dbcd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -548,6 +552,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3429441521011557061, guid: 11499a959c3de774188db3fbbec1fecc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b6288e2c2e5a96b4d9c13ed398a56d7d, type: 2}
+    - target: {fileID: 3977529168261158904, guid: 11499a959c3de774188db3fbbec1fecc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 857227043aa6e0f4788e36dec186ae27, type: 2}
     - target: {fileID: 8771091787928289351, guid: 11499a959c3de774188db3fbbec1fecc, type: 3}
       propertyPath: m_Name
       value: Avaturn-BaseModel_Old
